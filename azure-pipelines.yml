@@ -835,3 +835,8 @@ jobs:
       displayName: 'Run Functional Tests - Onboarding'
       timeoutInMinutes: 15
       continueOnError: true
+
+- task: PublishSymbols@2
+  inputs:
+    SearchPattern: '**/bin/**/*.pdb'
+    SymbolServerType: 'TeamServices'
